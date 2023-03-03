@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.sweetrollstudios.miraculousgemstaff.item.ModCreativeModeTabs;
 import net.sweetrollstudios.miraculousgemstaff.item.ModItems;
 import org.slf4j.Logger;
 
@@ -26,6 +27,7 @@ public class MiraculousGemStaff
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -40,7 +42,7 @@ public class MiraculousGemStaff
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event){
-        if(event.getTab() == CreativeModeTabs.INGREDIENTS){
+        if(event.getTab() == ModCreativeModeTabs.MIRACULOUS_TAB){
             event.accept(ModItems.CUT_ONYX);
             event.accept(ModItems.UNCUT_ONYX);
             event.accept(ModItems.SUNBURST_DIAMOND);
