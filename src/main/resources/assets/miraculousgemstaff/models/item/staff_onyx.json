@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures":{
+    "layer0": "miraculousgemstaff:item/staff_onyx"
+  }
+}
