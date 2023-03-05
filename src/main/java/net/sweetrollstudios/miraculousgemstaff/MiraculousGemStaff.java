@@ -1,7 +1,6 @@
 package net.sweetrollstudios.miraculousgemstaff;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -11,6 +10,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.sweetrollstudios.miraculousgemstaff.block.ModBlocks;
 import net.sweetrollstudios.miraculousgemstaff.item.ModCreativeModeTabs;
 import net.sweetrollstudios.miraculousgemstaff.item.ModItems;
 import org.slf4j.Logger;
@@ -27,7 +27,9 @@ public class MiraculousGemStaff
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -50,6 +52,7 @@ public class MiraculousGemStaff
             event.accept(ModItems.TIGER_EYE_ROCK);
             event.accept(ModItems.STAFF_ONYX);
             event.accept(ModItems.STAFF_SUNBURST_DIAMOND);
+            event.accept(ModBlocks.ONYX_BLOCK);
         }
     }
 
