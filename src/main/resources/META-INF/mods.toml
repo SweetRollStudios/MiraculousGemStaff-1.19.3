@@ -27,7 +27,7 @@ displayName="Miraculous Gem Staff" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="examplemod.png" #optional
+logoFile="modSplashArt.jpeg"
 # A text field displayed in the mod UI
 credits="My first attempt at finishing a project" #optional
 # A text field displayed in the mod UI
