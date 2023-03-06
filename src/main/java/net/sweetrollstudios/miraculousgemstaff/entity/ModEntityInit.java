@@ -12,6 +12,6 @@ public class ModEntityInit{
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MiraculousGemStaff.MODID);
 
-    public static final RegistryObject<EntityType<ExplosiveSpellEntity>> EXPLOSIVE_ARROW = ENTITY_TYPES.register("explosive_arrow",
-            () -> EntityType.Builder.of((EntityType.EntityFactory<ExplosiveSpellEntity>) ExplosiveSpellEntity::new, MobCategory.MISC).sized(0.5F, 0.5F).build("explosive_arrow"));
+    public static final RegistryObject<EntityType<ExplosiveSpellEntity>> EXPLOSIVE_SPELL = ENTITY_TYPES.register("explosive_spell",
+            () -> EntityType.Builder.of((EntityType.EntityFactory<ExplosiveSpellEntity>) ExplosiveSpellEntity::new, MobCategory.MISC).sized(0.5F, 0.5F).build("explosive_spell"));
 }

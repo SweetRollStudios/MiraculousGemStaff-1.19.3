@@ -11,6 +11,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.sweetrollstudios.miraculousgemstaff.block.ModBlocks;
+import net.sweetrollstudios.miraculousgemstaff.entity.ModEntityInit;
 import net.sweetrollstudios.miraculousgemstaff.item.ModCreativeModeTabs;
 import net.sweetrollstudios.miraculousgemstaff.item.ModItems;
 import org.slf4j.Logger;
@@ -29,6 +30,7 @@ public class MiraculousGemStaff
 
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModEntityInit.ENTITY_TYPES.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
